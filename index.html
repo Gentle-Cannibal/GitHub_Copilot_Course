@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Attendance Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Meeting Attendance Report</h1>
+        <div class="upload-section">
+            <label for="csvFiles">Upload CSV Files:</label>
+            <input type="file" id="csvFiles" accept=".csv" multiple>
+            <button id="processBtn">Process Files</button>
+        </div>
+        <div id="errorMsg" class="error"></div>
+        <div id="summaryTableSection" style="display:none;">
+            <h2>Attendance Summary</h2>
+            <div id="summaryTableContainer"></div>
+            <button id="exportBtn">Export to Excel</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
