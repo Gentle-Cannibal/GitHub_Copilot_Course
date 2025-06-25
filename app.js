@@ -58,7 +58,6 @@ function parseCsv(content, fileIdx, fileName) {
     if (missing.length) {
         throw new Error(`File ${fileName} is missing required columns: ${missing.join(', ')}`);
     }
-    const colIdx = Object.fromEntries(headers.map((h, i) => [h, i]));
     const records = lines.slice(1).map(line => {
         const cells = line.split(',');
         return Object.fromEntries(headers.map((h, i) => [h, cells[i] ? cells[i].trim() : '']));
